@@ -24,7 +24,6 @@ public class Teacher {
     @Column(name = "email", nullable = false, unique = true)
     private String email;
 
-//    @JsonManagedReference
     @ElementCollection
     @CollectionTable(name = "courses" ,joinColumns = @JoinColumn(name = "teacher_id"))
     @Column(name = "id")

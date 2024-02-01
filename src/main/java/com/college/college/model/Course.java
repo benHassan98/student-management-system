@@ -22,8 +22,6 @@ public class Course {
     @Column(name = "description" , nullable = false)
     private String description;
 
-//    @JsonBackReference(value = "course_students_back")
-//    @JsonManagedReference
     @ElementCollection
     @CollectionTable(name = "students_courses" ,joinColumns = @JoinColumn(name = "course_id"))
     @Column(name = "student_id")
